@@ -1,0 +1,4 @@
+Function:
+	post, delete, show, login
+Feature:
+	like, hate, bind key(n,p), CKeditor 

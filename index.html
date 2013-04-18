@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/ui-darkness/jquery-ui-1.10.2.custom.css" />
+	<meta charset="utf-8" />
+	<script src="lib/jquery/js/jquery-1.9.1.js"></script>
+	<script src="lib/jquery/js/jquery.cookies.2.2.0.min.js"></script>
+	<script src="lib/jquery/js/jquery-ui-1.10.2.custom.js"></script>
+	<script src="lib/ckeditor/ckeditor.js"></script>
+	<script src="board.js"></script>
+	<title>Guestbook</title>
+</head>
+<div id="main"><body>
+
+	<div id="footer">
+	<button onclick="login();" id="nonLogin">Login</button>
+	<text id="login"></text>
+	<button onclick="logout();" id="logout">Logout</button>
+	<hr/>
+	</div>
+
+    <center>
+	<div class="description">
+	<h1>Messages</h1>
+	</div>
+
+	<div id="content">
+	</div>
+
+	<br/><br/>
+	<hr/>
+	<div id="trash" class="ui-widget-header">
+  		<p>Trash</p>
+ 	</div>
+	<br/><br/>
+	<textarea cols="80" id="user_input" rows="10" value="tttEST" name="user_input"></textarea>
+	<input type="submit" value="Submit" onclick="post();"></input>
+
+	<div id="footer">
+	<hr/>
+	Create by VTxyer
+	</div>
+
+
+    </center>
+</body></div>
+</html>
+
+<script>
+CKEDITOR.replace( 'user_input', {
+    uiColor: '#eeeeee',
+    toolbar: [
+        [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],
+        [ 'FontSize', 'TextColor', 'BGColor' ]
+    ]
+});
+</script>
